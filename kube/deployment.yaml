@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: translation
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: machinetranslation
+  template:
+    metadata:
+      labels:
+        app: machinetranslation
+    spec:
+      containers:
+      - name: cv-app
+        image: gcr.io/tensor-machine-translation/translation:v1
+        ports:
+        - containerPort: 8501
