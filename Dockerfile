@@ -10,3 +10,5 @@ COPY . ./
 RUN ls -la $APP_HOME/
 
 RUN pip install -r requirements.txt
+
+CMD ["flask", "run","--server.enableCORS","false","app.py" ]

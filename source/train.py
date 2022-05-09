@@ -120,7 +120,7 @@ if __name__ == '__main__':
             run['Training Loss'].log(train_loss.result())
 
             if batch % 50 == 0:
-            print(f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f} Accuracy {train_accuracy.result():.4f}')
+                print(f'Epoch {epoch + 1} Batch {batch} Loss {train_loss.result():.4f} Accuracy {train_accuracy.result():.4f}')
 
         if (epoch + 1) % 5 == 0:
             ckpt_save_path = ckpt_manager.save()

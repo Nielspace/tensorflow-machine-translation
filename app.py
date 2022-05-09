@@ -39,6 +39,6 @@ def predict():
     return flask.jsonify(response)
 
 if __name__ == "__main__":
-    translator = tf.saved_model.load('../translator')
+    translator = tf.saved_model.load('../metadata/translator')
     translator = ExportTranslator(translator)
     app.run(host="0.0.0.0", port="9999")
