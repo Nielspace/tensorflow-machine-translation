@@ -17,4 +17,4 @@ steps:
     - run
     - --filename=kube/
     - --location=us-west1-b
-    - --cluster=tensorflow-machine-translation
+    - --cluster=tensor-machine-translation
